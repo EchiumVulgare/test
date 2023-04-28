@@ -105,5 +105,50 @@
 // console.log(str.match(/JavaScript/gi));
 
 //////////////////////////////////////////////////////////////////
-//
+//GAME!
 
+var riddle = {
+  question: "Hanging pear can not be eaten",
+  correctAnswer: "bulb",
+  hints: ["you can eat that", "it is a fruit"],
+  tries: 3,
+  checkAnswer(str) {
+    // TODO: write the logic for checking the correct answer
+    // alert for the user, console.log()
+    if (this.tries < 1) {
+      console.log("Game over");
+      return alert("Game over");
+    }
+
+    if (str.toLowerCase().includes(this.correctAnswer)) {
+      alert("Correct answer");
+      console.log("Correct answer");
+      this.tries = 0;
+    } else {
+      alert("Incorrect answer");
+      console.log("Incorrect answer");
+      this.tries--;
+
+      const hint = this.hints[this.tries === 2 ? 0 : 1];
+
+      if (this.tries) {
+        alert("clue: " + hint);
+      }
+    }
+  },
+};
+
+window.onload = function () {
+  document.getElementById("riddle").innerText = riddle.question;
+};
+
+function check() {
+  var input = document.getElementsByTagName("input")[0];
+
+  var guessedAnswer = input.value;
+
+  if (guessedAnswer) {
+    // TODO: call the checkAnswer function on the riddle object, passing the answer there
+    riddle.checkAnswer(guessedAnswer);
+  }
+}
