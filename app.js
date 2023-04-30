@@ -289,3 +289,27 @@
 // const result = copyArrayAndDosmth([1, 2, 3, 4, 5, 6], numSquared); //Принимают фунцию и внутри себя использует
 // const result2 = copyArrayAndDosmth([120, 312, 1, 23, 2, 3, 12, 3], divedeBy2); //Принимают фунцию и внутри себя использует
 // console.log(`${result}, ${result2}`);
+
+/////////////////////////// ZADANIE \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+function filterArray(array, callback) {
+  const newArray = [];
+  for (let i = 0; i < array.length; i += 1) {
+    if (callback(array[i])) newArray.push(array[i]);
+  }
+  return newArray;
+}
+const numbers = [1, 2, 3, 4, 5];
+
+function isOdd(num) {
+  // НЕЧЕТ!!!!!!
+  return num % 2 !== 0 continue
+  
+}
+function isEven(num) {
+  // ЧЕТ!!!!
+  return num % 2 === 0;
+}
+
+// Для проверки используйте логи
+console.log(filterArray(numbers, isEven)); // Должен вывести: [2, 4]
+console.log(filterArray(numbers, isOdd)); // Должен вывести: [1, 3, 5]
