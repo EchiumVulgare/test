@@ -105,50 +105,125 @@
 // console.log(str.match(/JavaScript/gi));
 
 //////////////////////////////////////////////////////////////////
-//GAME!
+//GAME! GUESS THE RIDDLE
 
-var riddle = {
-  question: "Hanging pear can not be eaten",
-  correctAnswer: "bulb",
-  hints: ["you can eat that", "it is a fruit"],
-  tries: 3,
-  checkAnswer(str) {
-    // TODO: write the logic for checking the correct answer
-    // alert for the user, console.log()
-    if (this.tries < 1) {
-      console.log("Game over");
-      return alert("Game over");
-    }
+// var riddle = {
+//   question: "Hanging pear can not be eaten",
+//   correctAnswer: "bulb",
+//   hints: ["you can eat that", "it is a fruit"],
+//   tries: 3,
+//   checkAnswer(str) {
+//     // TODO: write the logic for checking the correct answer
+//     // alert for the user, console.log()
+//     if (this.tries < 1) {
+//       // === 0
+//       return alert("Game over");
+//     }
 
-    if (str.toLowerCase().includes(this.correctAnswer)) {
-      alert("Correct answer");
-      console.log("Correct answer");
-      this.tries = 0;
-    } else {
-      alert("Incorrect answer");
-      console.log("Incorrect answer");
-      this.tries--;
+//     if (str.toLowerCase().includes(this.correctAnswer.toLowerCase())) {
+//       alert("Correct answer");
+//       console.log("Correct answer");
+//       this.tries = 0;
+//     } else {
+//       alert("Incorrect answer");
+//       console.log("Incorrect answer");
+//       this.tries--;
 
-      const hint = this.hints[this.tries === 2 ? 0 : 1];
+//       const hint = this.hints[this.tries === 2 ? 0 : 1];
 
-      if (this.tries) {
-        alert("clue: " + hint);
-      }
-    }
-  },
-};
+//       if (this.tries) {
+//         alert("clue: " + hint);
+//       }
+//     }
+//   },
+// };
 
-window.onload = function () {
-  document.getElementById("riddle").innerText = riddle.question;
-};
+// window.onload = function () {
+//   document.getElementById("riddle").innerText = riddle.question;
+// };
 
-function check() {
-  var input = document.getElementsByTagName("input")[0];
+// function check() {
+//   var input = document.getElementsByTagName("input")[0];
 
-  var guessedAnswer = input.value;
+//   var guessedAnswer = input.value;
 
-  if (guessedAnswer) {
-    // TODO: call the checkAnswer function on the riddle object, passing the answer there
-    riddle.checkAnswer(guessedAnswer);
-  }
-}
+//   if (guessedAnswer) {
+//     // TODO: call the checkAnswer function on the riddle object, passing the answer there
+//     riddle.checkAnswer(guessedAnswer);
+//   }
+// }
+
+//////////////////////////////////////////////////////////////////
+//FUNCTION vs Procedury
+
+// function sum(a, b) {
+//   return a + b;
+// }
+
+// const result = sum(5, 6);
+// console.log(result);
+
+// function sum2(a, b) {
+//   console.log(a + b);
+// }
+
+//////////////////////////////////////////////////////////////////
+//FUNCTION CONTEXT
+
+// function sum(a, b) {
+//   return a + b;
+// }
+
+// const result1 = sum(4, 6);
+// const result2 = sum(5, 8);
+// console.log(result1, result2);
+// фунция существует времененно выполнив свою задачу она удаляутся. переданные значения в функцию (а, б) переходят во временную память, а с помощью фунции return она может присваиваться константе и запысывается уже в глобальную память.
+
+//////////////////////////////////////////////////////////////////
+//ВАРИАНТЫ ЗАПИСИ ФУНЦИЙ!
+// 1. Function Declaration (Декларация фунции. ОБЪЯВЛЕНИЕ ФУНЦИИ) !!!!!!
+// sum(1, 4);
+// function sum(a, b) {
+//   return a + b;
+// }
+
+// // 2. Function Expression (Фунциональное выражение)
+// const sum1 = function (a, b) {
+//   return a + b;
+// };
+
+// // 3. IIFE (Immediately-invoked function expression)
+// (function (a, b) {
+//   return a + b;
+// })(5, 34);
+
+// // 4. Arrow function
+// const sum2 = (a, b) => {
+//   return a + b;
+// };
+// const sum3 = (a, b) => a + b;
+// const add1 = (x) => x + 1;
+
+// const average = function (a, b, c, d) {
+//   // funtion Expression
+//   return (a + b + c + d) / 4; // возвращает их среднее арифметическое
+// };
+// // 1. Создайте стрелочную функцию, которая принимает число и возвращает квадрат этого числа
+// const square = (a) => {
+//   // or a * a;
+//   return a * a;
+// };
+// // 2.Создайте стрелочную функцию, которая принимает 2 числа и возвращает их произведение. Сохраните функцию в переменную multiply.
+// const multiply = (a, b) => {
+//   return a * b;
+// };
+
+// // 3. Создайте стрелочную функцию, которая принимает возраст, проверяет его на критерий 18+, и в зависимости от проверки: печатает в консоль "welcome" или "access denied". Сохраните функцию в переменную checkAge
+
+// const checkAge = (age) => {
+//   if (age >= 18) {
+//     console.log("Welcome");
+//   } else {
+//     console.log("Access Denied");
+//   }
+// };
