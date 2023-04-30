@@ -291,25 +291,72 @@
 // console.log(`${result}, ${result2}`);
 
 /////////////////////////// ZADANIE \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-function filterArray(array, callback) {
-  const newArray = [];
-  for (let i = 0; i < array.length; i += 1) {
-    if (callback(array[i])) newArray.push(array[i]);
-  }
-  return newArray;
-}
-const numbers = [1, 2, 3, 4, 5];
+// function filterArray(array, callback) {
+//   const newArray = [];
+//   for (let i = 0; i < array.length; i += 1) {
+//     if (callback(array[i])) newArray.push(array[i]);
+//   }
+//   return newArray;
+// }
+// const numbers = [1, 2, 3, 4, 5];
 
-function isOdd(num) {
-  // НЕЧЕТ!!!!!!
-  return num % 2 !== 0 continue
-  
-}
-function isEven(num) {
-  // ЧЕТ!!!!
-  return num % 2 === 0;
-}
+// function isOdd(num) {
+//   // НЕЧЕТ!!!!!!
+//   return num % 2 !== 0 continue
 
-// Для проверки используйте логи
-console.log(filterArray(numbers, isEven)); // Должен вывести: [2, 4]
-console.log(filterArray(numbers, isOdd)); // Должен вывести: [1, 3, 5]
+// }
+// function isEven(num) {
+//   // ЧЕТ!!!!
+//   return num % 2 === 0;
+// }
+
+// // Для проверки используйте логи
+// console.log(filterArray(numbers, isEven)); // Должен вывести: [2, 4]
+// console.log(filterArray(numbers, isOdd)); // Должен вывести: [1, 3, 5]
+
+//////////////////////////////////////////////////////////////////
+//  RECURSION !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// РЕКУРСИЯ - ЭТО ФУНКЦИЯ КОТОРАЯ ВЫЗЫВАЕТ САМУ СЕБЯ!!!!
+// 1. БАЗОВЫЕ УСЛОВИЯ (терминально) return. if (n === 0) return 1;
+// 2. ПРАВИЛО ДВИЖЕНИЯ по РЕКУРСИИ.
+
+// function factorial(n) {
+//   if (n === 0) return 1;
+//   return n * factorial(n - 1);
+// }
+// console.log(factorial(3)); // we waiting 3 * 2 * 1  = 6 - это будет ФАКТОРИАЛ 3 \\ factorial(4) если передадим 4 тогда 4 * 3 * 2 * 1 = 24 Это будет факториал 4
+
+// принимает символ и возвращает этот символ в 5 экземплярахю (если передадим ьуквы "А" то ждем получения 5 букв "А")
+
+// ZADANIE !!!!!!!!!!!!!!!'
+
+// let counter = 0;
+// function repeater(char) {
+//   counter++;
+
+//   if (counter === 5) {
+//     counter = 0;
+//     return char;
+//   }
+
+//   return char + repeater(char);
+// }
+
+// console.log(repeater("x"));
+// console.log(repeater("a2"));
+//////////////////////////////////////////////
+// Практика на рекурсию
+// Напишите функцию getLength, которая в качестве параметра будет принимать массив и рекурсивно высчитывать его длину (количество элементов).
+
+// По условию задачи нельзя использовать встроенное свойство length массива.
+
+// Используйте метод pop для удаления элементов массива, чтобы подсчитать итоговое количество.
+// const arr1 = [12, 125, 1, 234];
+
+// function getLength(arr) {
+//   if (arr1.pop() === undefined) return 0;
+
+//   return 1 + getLength(arr1);
+// }
+
+// console.log(getLength(arr1));
