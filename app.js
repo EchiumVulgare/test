@@ -227,3 +227,65 @@
 //     console.log("Access Denied");
 //   }
 // };
+
+//////////////////////////////////////////////////////////////////
+// Scope ! (ОБЛАСТЬ ВИДИМОСТИ!!!!) контекст области памяти (контекст вызова фунции после вычислений уничтожается) во внешнюю. глобалную память вычисления фунции передаются с помощью RETURN !!!
+
+//////////////////////////////////////////////////////////////////
+//  Higher order function (ФУНЦИИ ВЫСШЕГО ПОРЯДКА!)
+// CallBack functions
+// function twoSquared() {
+//   return 2 * 2;
+// }
+// console.log(twoSquared());
+
+// function threeSquared() {
+//   return 3 * 3;
+// }
+// console.log(threeSquared());
+
+// function copyArrayAndSquareNums(arr) {
+//   const output = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     output.push(arr[i] ** 2); //  * arr[i]);
+//   }
+//   return output;
+// }
+// const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// const res = copyArrayAndSquareNums(nums);
+// console.log(res);
+
+// function copyArrayAndDivideByTwo(arr) {
+//   const output = [];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     output.push(arr[i] / 2);
+//   }
+//   return output;
+// }
+
+// const res2 = copyArrayAndDivideByTwo(nums);
+// console.log(res2);
+
+// function copyArrayAndDosmth(arr, instructions) {
+//   const output = [];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     output.push(instructions(arr[i]));
+//   }
+//   return output;
+// }
+
+// передаем эту функцию в КАЧЕСТВЕ ПАРАМЕТРА в другие функции или методы
+// function numSquared(num) {
+//   return num * num;
+// }
+
+// передаем эту функцию в КАЧЕСТВЕ ПАРАМЕТРА в другие функции или методы
+// function divedeBy2(num) {
+//   return num / 2;
+// }
+
+// const result = copyArrayAndDosmth([1, 2, 3, 4, 5, 6], numSquared); //Принимают фунцию и внутри себя использует
+// const result2 = copyArrayAndDosmth([120, 312, 1, 23, 2, 3, 12, 3], divedeBy2); //Принимают фунцию и внутри себя использует
+// console.log(`${result}, ${result2}`);
