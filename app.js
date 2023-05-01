@@ -360,3 +360,65 @@
 // }
 
 // console.log(getLength(arr1));
+
+/////////////////////////////////////////////////////////////////////////////////
+// Closure !!!!!!!!!!!! ЗАМЫКАНИЯ!!!!!!!!!!!
+// 1. Замыкания это функции, которын возвращаются из других функций.
+// 2. Возвращаемая функция запоминает область видиомости все переменные которые вокруг себя видит (SCOPE)
+
+function hello(name) {
+  const helloName = () => console.log("hello", name);
+  return helloName;
+}
+
+const helloWorld = hello("World");
+helloWorld();
+
+const helloJohn = hello("John");
+helloJohn();
+
+///////////////////////////////////////
+function outer() {
+  let counter = 0;
+
+  const incrementCounter = () => console.log(++counter);
+
+  return incrementCounter;
+}
+
+const myCouter1 = outer();
+myCouter1();
+myCouter1();
+myCouter1();
+
+const myCouter2 = outer();
+myCouter2();
+myCouter2();
+myCouter2();
+myCouter2();
+//////////////////////////////////////////////////////////////////////////
+//
+// Практика на замыкание
+// Создайте функцию addByX. Которая принимает 1 параметр (число) и возвращает новую функцию, которая также принимает число и возвращает его сумму с исходным параметром.
+
+function addByX(x) {
+  return (num) => x + num;
+}
+
+const addByTwo = addByX(2);
+addByTwo(3); //5
+addByTwo(5); //7
+
+const addByFour = addByX(4);
+addByFour(3); //7
+addByFour(5); //9
+
+// Примеры использования:
+
+// const addByTwo = addByX(2);
+// addByTwo(3); // 5
+// addByTwo(5); // 7
+
+// const addByFour = addByX(4);
+// addByFour(3); // 7
+// addByFour(5); // 9
