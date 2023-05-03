@@ -700,29 +700,104 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
 // Immutable - иммутабельнй, значит НЕ ИЗМЕНЯЕМЫЙ!
-const arr = [1, 2, 3, 4, 5];
+// const arr = [1, 2, 3, 4, 5];
 
-//don't USE POP(), PUSH(), shift(), unshift(), sort(), revers() !!!!!!!!!!!!!!!!
-const newArr = arr.slice(0, 4); // [1, 2, 3, 4];
-const newArr2 = [0, ...arr]; // [0, 1, 2, 3, 4, 5];
+// //don't USE POP(), PUSH(), shift(), unshift(), sort(), revers() !!!!!!!!!!!!!!!!
+// const newArr = arr.slice(0, 4); // [1, 2, 3, 4];
+// const newArr2 = [0, ...arr]; // [0, 1, 2, 3, 4, 5];
 
-console.log(arr);
-console.log(newArr);
-console.log(newArr2);
+// console.log(arr);
+// console.log(newArr);
+// console.log(newArr2);
 
-const obj = {
-  a: 1,
-  b: 2,
-  c: 3,
-};
+// const obj = {
+//   a: 1,
+//   b: 2,
+//   c: 3,
+// };
 
-obj.d = 4; // mutation (do not do like that);
-obj.a = 10; // mutation! (do not do like that);
+// obj.d = 4; // mutation (do not do like that);
+// obj.a = 10; // mutation! (do not do like that);
 
-const obj2 = {
-  ...obj,
-  a: 10,
-  d: 4,
-}; //{a: 10, b: 2, c: 3, d: 4}
+// const obj2 = {
+//   ...obj,
+//   a: 10,
+//   d: 4,
+// }; //{a: 10, b: 2, c: 3, d: 4}
 
-console.log(obj2);
+// console.log(obj2);
+
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+//                          Mapping !!!!!!!!!!!!!!!!!!!!!!!!!!!
+//              map, forEach  !!!!!!!!!!!!!!
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+
+// const arr = [];
+
+// // function doubleNum(num) {
+// //   arr.push(num * 2);
+// // }
+
+// function print(el) {
+//   console.log(el);
+// }
+// // const result = numbers.forEach(print);
+// // console.log(result);
+// // console.log(numbers);
+// function dubleNum(num) {
+//   return num * 2;
+// }
+
+// const result = numbers.map(num => num * 2); // map always RETURN new ARR!!! we get new arr whit new elements const result = [2, 4, 6, 8, 10, 12, 14, 16] && OLD elements from cosnt numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+// console.log(result);
+// console.log(numbers);
+
+////////////////////////////practice/////////////////////////////////////////////////////
+////////////////////////////practice/////////////////////////////////////////////////////
+////////////////////////////practice/////////////////////////////////////////////////////
+////////////////////////////practice/////////////////////////////////////////////////////
+////////////////////////////practice/////////////////////////////////////////////////////
+
+// Практика на маппинг массивов и коллекций
+// 1) Дан массив чисел numbers. Создайте на его основе новый массив doubledNumbers, в котором каждый элемент из оригинального массива умножен на два.
+
+// 2) Дана коллекция developers. Создайте на ее основе новую коллекцию middleDevelopers, увеличив значения ключа salary на 500, а также добавив к ключу skills значение 'TypeScript'.
+
+// const numbers = [1, 22, 12, 66, 90, 51, 11];
+
+// const doubledNumbers = numbers.map((num) => num * 2);
+
+// const developers = [
+//   {
+//     id: 1,
+//     fullName: "Anton Petrov",
+//     skills: ["HTML", "CSS", "JavaScript", "Git", "React"],
+//     salary: 1000,
+//   },
+//   {
+//     id: 2,
+//     fullName: "Ivan Ivanov",
+//     skills: ["HTML", "CSS", "JavaScript", "Git", "Vue"],
+//     salary: 950,
+//   },
+//   {
+//     id: 3,
+//     fullName: "Albert Sidorov",
+//     skills: ["HTML", "CSS", "JavaScript", "Git", "jQuery"],
+//     salary: 850,
+//   },
+// ];
+
+// const middleDevelopers = developers.map((dev) => ({
+//   id: dev.id,
+//   fullName: dev.fullName,
+//   skills: [...dev.skills, "TypeScript"],
+//   salary: dev.salary + 500,
+// }));
+
+// console.log(middleDevelopers);
