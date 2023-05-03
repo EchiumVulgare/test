@@ -669,27 +669,60 @@
 //Queue - first in, first out.
 //push - add element to Arr (добавляет последний елемент массива!)
 //shift - delete first of element from Arr (удаляет первый елемент массива!)
-const arr = [];
-arr.push(4);
-arr.push(7);
-arr.push(9);
-console.log(arr); //pered udaleniem u nas w arr 3 elementa arr [4,7,9]
+// const arr = [];
+// arr.push(4);
+// arr.push(7);
+// arr.push(9);
+// console.log(arr); //pered udaleniem u nas w arr 3 elementa arr [4,7,9]
 
-arr.shift(); //delited first element of arr
-console.log(arr); //posle udalenia ostalos 2 elementa w arr [7,9]
+// arr.shift(); //delited first element of arr
+// console.log(arr); //posle udalenia ostalos 2 elementa w arr [7,9]
 
-// Stack - first in, last out !!! FILO
-//FILO
-//push/pop
-const arr2 = [];
-arr2.push(1);
-arr2.push(2);
-arr2.push(3);
-arr2.push(5);
+// // Stack - first in, last out !!! FILO
+// //FILO
+// //push/pop
+// const arr2 = [];
+// arr2.push(1);
+// arr2.push(2);
+// arr2.push(3);
+// arr2.push(5);
 
-console.log(arr2);
+// console.log(arr2);
 
-arr2.pop();
-arr2.pop();
+// arr2.pop();
+// arr2.pop();
 
-console.log(arr2);
+// console.log(arr2);
+
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+// Immutable - иммутабельнй, значит НЕ ИЗМЕНЯЕМЫЙ!
+const arr = [1, 2, 3, 4, 5];
+
+//don't USE POP(), PUSH(), shift(), unshift(), sort(), revers() !!!!!!!!!!!!!!!!
+const newArr = arr.slice(0, 4); // [1, 2, 3, 4];
+const newArr2 = [0, ...arr]; // [0, 1, 2, 3, 4, 5];
+
+console.log(arr);
+console.log(newArr);
+console.log(newArr2);
+
+const obj = {
+  a: 1,
+  b: 2,
+  c: 3,
+};
+
+obj.d = 4; // mutation (do not do like that);
+obj.a = 10; // mutation! (do not do like that);
+
+const obj2 = {
+  ...obj,
+  a: 10,
+  d: 4,
+}; //{a: 10, b: 2, c: 3, d: 4}
+
+console.log(obj2);
