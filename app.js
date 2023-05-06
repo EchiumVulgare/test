@@ -956,12 +956,125 @@
 ////////////////////////////////FILTER///////////////////////////////////////////////////
 ////////////////////////////////FILTER///////////////////////////////////////////////////
 
-const arr = [12, 2, 1, 2, 3, 1, 1, 2, 10, 9, 10];
-const handleFilter = (num, index, curentArr) => index % 2 === 0 && num === 1;
-// // const handleFilter = (num, index, curentArr) => curentArr.length === num;
-// // const handleFilter = (num, index, currentArr) => {};
-const newArr = arr.find(handleFilter); //finde
+// const arr = [12, 2, 1, 2, 3, 1, 1, 2, 10, 9, 10];
+// const handleFilter = (num, index, curentArr) => index % 2 === 0 && num === 1;
+// // // const handleFilter = (num, index, curentArr) => curentArr.length === num;
+// // // const handleFilter = (num, index, currentArr) => {};
+// const newArr = arr.find(handleFilter); //find
 
-// console.log(newArr);
-// const arr2 = [1, 2, 3, 4, 5];
-// function yesOrNo(arr, newFun) {}
+// // console.log(newArr);
+// // const arr2 = [1, 2, 3, 4, 5];
+// // function yesOrNo(arr, newFun) {}
+
+////////////////////////////////METHOD///////////////////////////////////////////////////
+////////////////////////////////METHOD///////////////////////////////////////////////////
+////////////////////////////////METHOD///////////////////////////////////////////////////
+////////////////////////////////METHOD///////////////////////////////////////////////////
+// ////////////////////////////////METHOD///////////////////////////////////////////////////
+
+// const person = {
+//   name: "Alex",
+//   age: 34,
+//   job: "frontend",
+// //   whoAreYou: function () {
+// //     return this.name;
+// //   },
+// };
+
+// // const whoAreYou () => return this.name;
+// function whoAreYou(arg) {
+//   return this.age + arg;
+// }
+// console.log(whoAreYou.call(person, 6))
+// // console.log([1,2,3,4,5].join(":"));
+// // const result = Array.prototype.join.call("adfhasfhalskdfalkfd", "-----");
+// // console.log(result)
+
+// console.log([1, 2, 3, 4, 5].pop());
+// const arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "asdasd", "qwe", 123, "werwr"];
+// let counter = 0;
+
+// function getLength(arr) {
+//   console.log(arr);
+//   if (arr.pop() === undefined) {
+//     return counter;
+//   } else {
+//     counter++;
+//     return getLength(arr);
+//   }
+// }
+
+// console.log(getLength(arr1));
+
+// function mygcd(x, y) {
+//   if (!y) return x;
+//   console.log(x, y);
+//   return mygcd(y, x % y);
+// }
+// console.log(mygcd(36, 12));
+
+// const newArr = [0, 4, 6, 8, 8, 8, 5, 5, 7];
+
+// function setReducer(input) {
+//   if (input.length === 1) return input[0];
+
+//   const obj = input.reduce((acc, el) => {
+//     if (acc[el]) {
+//       acc[el] += 1;
+//     } else {
+//       acc[el] = 1;
+//     }
+//     return acc;
+//   }, {});
+//   const nextArray = Object.values(obj);
+//   console.log(nextArray);
+//   return setReducer(nextArray);
+// }
+// console.log(setReducer(newArr));
+
+// function setReducer(input) {
+//   if (input.length === 1) return input[0];
+//   const nextArray = [];
+//   let counter = 1;
+//   for (let i = 0; i < input.length; i++) {
+//     if (input[i + 1] === input[i]) {
+//       counter++;
+//     } else {
+//       nextArray.push(counter);
+//       counter = 1;
+//     }
+//   }
+
+//   return setReducer(nextArray);
+// }
+// console.log(setReducer([1, 7, 0, 6, 1, 9, 0, 7, 1, 6, 0, 9, 0]));
+
+// const useState = () => {
+//   let counter = 0;
+//   return { setState: (n) => (counter += n), getState: () => counter };
+// };
+// const counter = useState();
+// counter.setState(3);
+// counter.setState(4);
+
+// console.log(counter.getState());
+
+// function average(num) {
+//   if (num === 1) return 1;
+//   return num + average(num - 1);
+// }
+// // console.log(average(5));
+
+// function sumFromTo(from, to) {
+//   if (to === from) return from;
+//
+//   return from + sumFromTo(from + 1, to);
+// }
+// console.log(sumFromTo(5, 50));
+// console.log(sumFromTo(1, 5));
+
+function factorial(n) {
+  if (n === 0) return 1;
+  return n * factorial(n - 1);
+}
+console.log(factorial(4));
