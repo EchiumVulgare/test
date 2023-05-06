@@ -1073,8 +1073,52 @@
 // console.log(sumFromTo(5, 50));
 // console.log(sumFromTo(1, 5));
 
-function factorial(n) {
-  if (n === 0) return 1;
-  return n * factorial(n - 1);
-}
-console.log(factorial(4));
+// function factorial(n) {
+//   if (n === 0) return 1;
+//   return n * factorial(n - 1);
+// }
+// console.log(factorial(4));
+
+////////////////////////////////REDUCE///////////////////////////////////////////////////
+////////////////////////////////REDUCE///////////////////////////////////////////////////
+////////////////////////////////REDUCE///////////////////////////////////////////////////
+////////////////////////////////REDUCE///////////////////////////////////////////////////
+////////////////////////////////REDUCE///////////////////////////////////////////////////
+
+const staff = [
+  {
+    id: 1,
+    name: "John Doe",
+    salary: 1000,
+  },
+  {
+    id: 2,
+    name: "Sara smith",
+    salary: 900,
+  },
+  {
+    id: 3,
+    name: "Elton John",
+    salary: 1100,
+  },
+  {
+    id: 4,
+    name: "Mo Williams",
+    salary: 1000,
+  },
+];
+
+const budget = staff.reduce((acc, user) => {
+  return acc + user.salary;
+}, 0);
+
+console.log(budget);
+
+const budgetForSmallPersonal = staff.reduce((acc, user) => {
+  if (user.salary < 1000) {
+    return acc + user.salary;
+  }
+  return acc;
+}, 0);
+
+console.log(budgetForSmallPersonal);
