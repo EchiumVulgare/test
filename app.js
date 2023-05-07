@@ -372,6 +372,14 @@
 // console.log(filterArray(numbers, isEven)); // Должен вывести: [2, 4]
 // console.log(filterArray(numbers, isOdd)); // Должен вывести: [1, 3, 5]
 
+// ///////////////////// фильтр СОЗДАЕТ НОВЫЙ МАССИВ, в который войдут те елементы arr, для которых вызов callback(item, i, arr) возвратит TRUE.
+// const arr = [1, -1, 2, -2, 3];
+
+// const positiveArr = arr.filter((num) => {
+//   return num > 0;
+// });
+// console.log(positiveArr); // expected new arr[1, 2, 3];
+
 //////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////
@@ -757,6 +765,15 @@
 // console.log(result);
 // console.log(numbers);
 
+//////////////////////////// метод «arr.map(callback[, thisArg])» используется для трансформации массива. Он создает новый массив, который будет сосоять из результатов вызова callback(item, i, arr) для каждого елемента arr.
+
+// const names = ["HTML", "CSS", "JavaScript", "React"];
+
+// const nameLengths = names.map(function (name) {
+//   return name.length;
+// });
+// console.log(nameLengths); // expect [4, 3, 10, 5];
+
 ////////////////////////////practice/////////////////////////////////////////////////////
 ////////////////////////////practice/////////////////////////////////////////////////////
 ////////////////////////////practice/////////////////////////////////////////////////////
@@ -801,6 +818,62 @@
 // }));
 
 // console.log(middleDevelopers);
+
+////////////////////////////practice MAP/////////////////////////////////////////////////////
+
+//Код ниже получает из массива строк новый массив, содержащий их длины:
+// const arr = ["Есть", "жизнь", "на", "Марсе"];
+
+// const arrLength = [];
+// for (let i = 0; i < arr.length; i++) {
+//   arrLength[i] = arr[i].length;
+// }
+// console.log(arrLength);
+
+//Перепишите выделенный участок: уберите цикл, используйте вместо него метод map.
+
+// const mapArr = arr.map((el) => {
+//   return el.length;
+// });
+
+// console.log(mapArr);
+
+/////////////////////////////////////////////////////
+
+// const arr = [1, 2, 3, 4, 5];
+// const arr1 = [-2, -1, 0, 1];
+// const getSums = (arr) => {
+//   return arr.reduce((acc, el, i, array) => {
+//     const sum = array.reduce((result, element, index) => {
+//       if (index > i) return result;
+//       result += element;
+//       return result;
+//     }, 0);
+
+//     acc.push(sum);
+
+//     return acc;
+//   }, []);
+// };
+
+// console.log(getSums());
+
+////////////////////////////////EVER/SOME///////////////////////////////////////////////////
+////////////////////////////////EVER/SOME///////////////////////////////////////////////////
+////////////////////////////////EVER/SOME///////////////////////////////////////////////////
+////////////////////////////////EVER/SOME///////////////////////////////////////////////////
+////////////////////////////////EVER/SOME///////////////////////////////////////////////////
+// Эти методы используются для проверки массива.
+// • Метод «arr.every(callback[, thisArg])» возвращает true, если вызов callback вернёт true для каждого елемента arr.
+// • Метод «arr.some(callback[, thisArg])» возвращает true, если вызов callback вернёт true для какого-нибудь элемента arr.
+
+// const arr = [1, -1, 2, -2, 3];
+
+// function isPositive(number) {
+//   return number > 0;
+// }
+// console.log(arr.every(isPositive)); //expected false;
+// console.log(arr.some(isPositive)); //expected true;
 
 ////////////////////////////////FILTER///////////////////////////////////////////////////
 ////////////////////////////////FILTER///////////////////////////////////////////////////
@@ -1085,40 +1158,158 @@
 ////////////////////////////////REDUCE///////////////////////////////////////////////////
 ////////////////////////////////REDUCE///////////////////////////////////////////////////
 
-const staff = [
-  {
-    id: 1,
-    name: "John Doe",
-    salary: 1000,
-  },
-  {
-    id: 2,
-    name: "Sara smith",
-    salary: 900,
-  },
-  {
-    id: 3,
-    name: "Elton John",
-    salary: 1100,
-  },
-  {
-    id: 4,
-    name: "Mo Williams",
-    salary: 1000,
-  },
-];
+// const staff = [
+//   {
+//     id: 1,
+//     name: "John Doe",
+//     salary: 1000,
+//   },
+//   {
+//     id: 2,
+//     name: "Sara smith",
+//     salary: 900,
+//   },
+//   {
+//     id: 3,
+//     name: "Elton John",
+//     salary: 1100,
+//   },
+//   {
+//     id: 4,
+//     name: "Mo Williams",
+//     salary: 1000,
+//   },
+// ];
 
-const budget = staff.reduce((acc, user) => {
-  return acc + user.salary;
-}, 0);
+// const budget = staff.reduce((acc, user) => {
+//   return acc + user.salary;
+// }, 0);
 
-console.log(budget);
+// console.log(budget);
 
-const budgetForSmallPersonal = staff.reduce((acc, user) => {
-  if (user.salary < 1000) {
-    return acc + user.salary;
-  }
-  return acc;
-}, 0);
+// const budgetForSmallPersonal = staff.reduce((acc, user) => {
+//   if (user.salary < 1000) {
+//     return acc + user.salary;
+//   }
+//   return acc;
+// }, 0);
 
-console.log(budgetForSmallPersonal);
+// console.log(budgetForSmallPersonal);
+
+// const salaries = staff.reduce((acc, user) => {
+//   return [...acc, user.salary];
+// }, []);
+
+// console.log(salaries);
+
+///////////////////////////////////Практика на reduce///////////////////////////////////
+///////////////////////////////////Практика на reduce///////////////////////////////////
+///////////////////////////////////Практика на reduce///////////////////////////////////
+///////////////////////////////////Практика на reduce///////////////////////////////////
+// Дана коллекция товаров в корзине order. У каждого товара есть цена price и количество quantity.
+// Подсчитайте общую стоимость товаров в корзине и сохраните значение в переменной totalPrice.
+
+// const order = [
+//   {
+//     id: 1,
+//     name: "Лопата",
+//     price: 1000,
+//     quantity: 1,
+//   },
+//   {
+//     id: 2,
+//     name: "Удочка",
+//     price: 1200,
+//     quantity: 2,
+//   },
+//   {
+//     id: 3,
+//     name: "Ведро",
+//     price: 500,
+//     quantity: 3,
+//   },
+//   {
+//     id: 4,
+//     name: "Мороженое",
+//     price: 100,
+//     quantity: 8,
+//   },
+// ];
+
+// const totalPrice = order.reduce((acc, thing) => {
+//   return acc + thing.price * thing.quantity;
+// }, 0);
+
+// console.log(totalPrice);
+
+///////////////////////////////////Практика на reduce///////////////////////////////////
+///////////////////////////////////Практика на reduce///////////////////////////////////
+// const arr = [1, 2, 3, 4, 5];
+
+// const result = arr.reduce((acc, sum) => {
+//   return acc + sum;
+// }, 0);
+
+// console.log(result); // expected result 15; По умолчани acc равен = 0 (это значение мы сами выставили изначально),А  sum равен перому елементу массива в нашем случае он равен = 1. По условию внутри тела фунции return acc + sum; acc 0 + sum 1(значение первего елемента массива) получаем = 1, затем в acc перезаписывается значение елемент с 0 на 1, а в sum попадает следующий елемент массива в нашем случае это 2. Следовательно - acc теперь имеет значение 1 + sum 2 = 3 (новый полученный результат записывается в асс) поэтому получаем следующий шаг acc равен теперь 3, а в sum принимает следующий елемент из списка массива в нашем случае это 3. Затем тело фунции делает свою работу АСС = 3 sum = 3 = 6. в АСС теперь попадает 6, а в sum падает новой елемент массива, в нашем случае это 4. АСС 6 + sum 4 = 10 теперь 10 попадает в АСС а в sum вновь подставяется следующий по очереди елемент из массива в нашем случае это 5. получаем АСС в себе хранит 10 + sum 5 = 15.
+
+// REDUCE names. найти кол-во имен. вывести об. с кол-вом повторяющихся имен.
+// const names = ["eugene", "eugene", "andrew", "michael", "eugene", "andrew"];
+
+// const obj = names.reduce((acc, el) => {
+//   if (acc[el]) {
+//     acc[el] += 1;
+//   } else {
+//     acc[el] = 1;
+//   }
+//   return acc;
+// }, {});
+
+// console.log(obj);
+//в данном случае АСС это наш пустой объект. Начинается работа встроенного в reduce цикла. Который бежит по нашему массиву и мы определили его поведение, что будет делать цикл после того как возьмет наше елемент. он берет наш елемент из массива.
+
+// const lexa = "lexa";
+// const lexaArr = ["l", "e", "x", "a"];
+// const lexaObj = {
+//   0: "l",
+//   1: "e",
+//   2: "x",
+//   3: "a",
+//   length: 4,
+// };
+
+// console.log(lexa.indexOf("x"));
+// console.log(lexaArr.indexOf("x"));
+// console.log(lexaObj.indexOf("x"));
+// console.log(lexa.indexOf("t"));
+// console.log(lexaArr.indexOf("t"));
+// console.log(lexa.findIndex("e"));
+// console.log(lexaArr.findIndex((el) => el === "t"));
+// const arr = [1, 2, 3, 4, 5];
+// let sum = 0;
+
+// // arr.forEach((el) => {
+// //   sum += el;
+// // });
+// // console.log(sum);
+// const newArr = arr.forEach((el) => {
+//   sum += el;
+// });
+
+// console.log(sum);
+// console.log(newArr);
+//// custom map
+const customMap = (arr, fn) => {
+  const result = [];
+  arr.forEach((el) => {
+    const transformElement = fn(el);
+    result.push(transformElement);
+  });
+  // for (let i = 0; i < arr.length; i++) {
+  //   const transformElement = fn(arr[i]);
+  //   result.push(transformElement);
+  // }
+  return result;
+};
+
+console.log(customMap([1, 2, 3, 4], (el) => el * 2));
+console.log([1, 2, 3, 4].map((el) => el * 2));
