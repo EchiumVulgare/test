@@ -1334,8 +1334,5 @@
 
 // console.log(typeof double); // Вывод: function
 
-// let str = "qwerty";
-// console.log(str.split(""));
-// const arr = [1, 2, 3, 4, 5];
-// const str = "12345";
-// console.log(arr.join(lexaObj));
+// let str = "qwerty werwer we33f wweer werwerwer";
+// console.log(str.split(/\s+/));
