@@ -1298,18 +1298,44 @@
 // console.log(sum);
 // console.log(newArr);
 //// custom map
-const customMap = (arr, fn) => {
-  const result = [];
-  arr.forEach((el) => {
-    const transformElement = fn(el);
-    result.push(transformElement);
-  });
-  // for (let i = 0; i < arr.length; i++) {
-  //   const transformElement = fn(arr[i]);
-  //   result.push(transformElement);
-  // }
-  return result;
-};
+// const customMap = (arr, fn) => {
+//   const result = [];
+//   arr.forEach((el) => {
+//     const transformElement = fn(el);
+//     result.push(transformElement);
+//   });
+//   // for (let i = 0; i < arr.length; i++) {
+//   //   const transformElement = fn(arr[i]);
+//   //   result.push(transformElement);
+//   // }
+//   return result;
+// };
 
-console.log(customMap([1, 2, 3, 4], (el) => el * 2));
-console.log([1, 2, 3, 4].map((el) => el * 2));
+// console.log(customMap([1, 2, 3, 4], (el) => el * 2));
+// console.log([1, 2, 3, 4].map((el) => el * 2));
+
+// for (let i = 1; i <= 4; i++) {
+//   var y = 5;
+
+//   console.log(y);
+// }
+
+// function getX() {
+//   return function () {
+//     return y;
+//   };
+// }
+// console.log(getX()());
+// var double;
+
+// function double(num) {
+//   return num * 2;
+// }
+
+// console.log(typeof double); // Вывод: function
+
+// let str = "qwerty";
+// console.log(str.split(""));
+// const arr = [1, 2, 3, 4, 5];
+// const str = "12345";
+// console.log(arr.join(lexaObj));
