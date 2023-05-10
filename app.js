@@ -1342,8 +1342,37 @@
 //   x += 1; // x = x + 1;
 // }
 
-let x2 = 5;
-do {
-  console.log("x = " + x2); // expecting result is 5,4,3,2,1
-  x2 = x2 - 1; // x -= 1;
-} while (x2 >= 1);
+// let x2 = 5;
+// do {
+//   console.log("x = " + x2); // expecting result is 5,4,3,2,1
+//   x2 = x2 - 1; // x -= 1;
+// } while (x2 >= 1);
+
+// function testWhile(a) {
+//   var x = 0;
+//   let y = 0;
+//   do {
+//     if (y % 2 !== 0) {
+//       x += y; // x = x + y;
+//     }
+//     y++;
+//   } while (y <= a);
+
+//   return x;
+// }
+
+// console.log(testWhile(7));
+
+// for (i = 1; i < 10; i = i + 1) {
+//   if (i == 5) {
+//     break;
+//   }
+//   console.log("i =" + i);
+// }
+
+// for (i = 1; i < 10; i = i + 1) {
+//   if (i == 5) {
+//     continue;
+//   }
+//   console.log("i =" + i);
+// }
