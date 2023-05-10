@@ -1336,3 +1336,14 @@
 
 // let str = "qwerty werwer we33f wweer werwerwer";
 // console.log(str.split(/\s+/));
+// let x = 1;
+// while (x <= 5) {
+//   console.log("x =" + x); // we a expect 1,2,3,4,5
+//   x += 1; // x = x + 1;
+// }
+
+let x2 = 5;
+do {
+  console.log("x = " + x2); // expecting result is 5,4,3,2,1
+  x2 = x2 - 1; // x -= 1;
+} while (x2 >= 1);
