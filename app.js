@@ -1376,3 +1376,26 @@
 //   }
 //   console.log("i =" + i);
 // }
+
+//PRACTICE RECURSION
+// function my_function(n) {
+//   if (n <= 1) return 1;
+//   return my_function(n - 1) + " " + n;
+// }
+// console.log(my_function(111));
+// OBJECT
+// var person = {}; // Declare object person
+// person.sayAge = function (n) {
+//   // Declare the sayAge method for the person
+//   console.log("Person is" + n + "years old"); // Body of the sayAge method - text output
+// };
+// person.sayAge(16);
+var person = {
+  name: "Ivan",
+  age: 25,
+  hiredYear: 2017,
+};
+
+person.sayName = function () {
+  console.log("My name is" + this.name);
+};
