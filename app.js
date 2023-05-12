@@ -765,7 +765,7 @@
 // console.log(result);
 // console.log(numbers);
 
-//////////////////////////// метод «arr.map(callback[, thisArg])» используется для трансформации массива. Он создает новый массив, который будет сосоять из результатов вызова callback(item, i, arr) для каждого елемента arr.
+//////////////////////////// метод "arr.map(callback[, thisArg])" используется для трансформации массива. Он создает новый массив, который будет сосоять из результатов вызова callback(item, i, arr) для каждого елемента arr.
 
 // const names = ["HTML", "CSS", "JavaScript", "React"];
 
@@ -864,8 +864,8 @@
 ////////////////////////////////EVER/SOME///////////////////////////////////////////////////
 ////////////////////////////////EVER/SOME///////////////////////////////////////////////////
 // Эти методы используются для проверки массива.
-// • Метод «arr.every(callback[, thisArg])» возвращает true, если вызов callback вернёт true для каждого елемента arr.
-// • Метод «arr.some(callback[, thisArg])» возвращает true, если вызов callback вернёт true для какого-нибудь элемента arr.
+// • Метод "arr.every(callback[, thisArg])" возвращает true, если вызов callback вернёт true для каждого елемента arr.
+// • Метод "arr.some(callback[, thisArg])" возвращает true, если вызов callback вернёт true для какого-нибудь элемента arr.
 
 // const arr = [1, -1, 2, -2, 3];
 
@@ -1441,3 +1441,48 @@
 // var cat = "Cat";
 // cat = cat.charAt(2) + cat.charAt(1) + cat.charAt(0);
 // console.log(cat);
+
+// const date = new Date(2012, 1, 20, 4, 12);
+// console.log(date);
+
+// let date = new Date(2012, 0, 3); // 3 января 2012 года
+
+// function getWeekDay(date) {
+//   // const weeksDays = ["ВС", "ПН", "ВТ", "СР", "ЧТ", "ПТ", "СБ"];
+//   return date.getDay();
+// }
+// console.log(getWeekDay(date));
+
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+
+// let date = new Date(2015, 0, 2);
+
+// function getDateAgo(date, num) {
+//   let curentTime = date.getTime();
+//   let spanTime = num * 24 * 60 * 60 * 1000;
+//   let newTime = curentTime - spanTime;
+//   return new Date(newTime).getDate();
+// }
+
+// console.log(getDateAgo(date, 365));
+
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+
+// function getLastDayOfMonth(year, month) {
+//   const date = new Date(year, month + 1);
+//   return date.getDate();
+// }
+
+// console.log(getLastDayOfMonth(2012, 1));
+// ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+// try {
+//   for (let i = 0; i <= 5; i++) {
+//     console.log(i);
+//   }
+// } catch (err) {
+//   console.log(err);
+// }
+// console.log("End of the Script");
