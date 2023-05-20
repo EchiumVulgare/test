@@ -1496,3 +1496,110 @@
 // let result = str.match(/abcd/g);
 
 // console.log(new RegExp(str));
+
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+// Course HEXLET JAVA SCRIPT ES6
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+
+//
+// const reverse = (str) => {
+//   let arr = [];
+//   for (let i = str.length - 1, j = 0; i >= 0; i--, j++) arr[j] = str[i];
+//   return arr.join("");
+// };
+
+// reverse("hello, world!");
+// console.log(reverse("hello, world!"));
+
+// function smallestDivisor(num) {
+
+// if (num === 1) return 1;
+// let divisor = 2;
+// if (num % divisor === 0) {
+//   return divisor;
+// } else {
+
+// }
+// }
+
+// const smallestDivisor = (num) => {
+// if (num === 1) return 1;
+// let divisor = 2;
+
+// while (true) {
+//   if (num % divisor === 0) {
+//     return divisor;
+//   } else {
+//     divisor++;
+//   }
+// }
+// };
+
+// console.log(smallestDivisor(33));
+
+// const smallestDivisor = (num, divisor) => {
+//   if (num === 1) return 1;
+
+//   if (num % divisor === 0) return divisor;
+
+//   return smallestDivisor(num, divisor + 1);
+// };
+
+// console.log(smallestDivisor(17, 2));
+
+// const smallestDivisor = (num) => {
+
+// const smallestDivisor = (num, divisor) => {
+//   if (num === 1) return 1;
+
+//   if (num % divisor === 0) return divisor;
+
+//   return smallestDivisor(num, divisor + 1);
+// };
+
+// };
+
+///////////////////////////////////
+
+// const testScore = 10;
+// const result = testScore < 10 ? "bad" : "good";
+// console.log(result);
+
+///////////////////////////////////
+
+// const func = (num) => {
+//   if (num > 0) {
+//     return num - 1;
+//   }
+
+//   return num + 1;
+// };
+
+// console.log(func(-2));
+
+///////////////////////////////////
+
+// const finalGrade = (exam, projects) => {
+//   if (exam > 90 || projects > 10) {
+//     return 100;
+//   } else if (exam > 75 && projects >= 5) {
+//     return 90;
+//   } else if (exam > 50 && projects >= 2) {
+//     return 75;
+//   } else {
+//     return 0;
+//   }
+// };
+// console.log(finalGrade(20, 2));
+
+///////////////////////////////////
+
+// function my_function(n) {
+//   if (n === 1) return 1;
+//   return my_function(n - 1) + " " + n;
+// }
+// console.log(my_function(7));
