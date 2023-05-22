@@ -1604,3 +1604,4 @@
 // }
 // console.log(my_function(7));
 
+let number = 5
