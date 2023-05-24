@@ -1603,12 +1603,18 @@
 // }
 // console.log(my_function(7));
 
-const answers = [];
+// const answers = [];
 
-answers[0] = prompt('What is your name?', '');
-answers[1] = prompt('What is your surname?', '');
-answers[2] = prompt('How old are you ?', '');
+// answers[0] = prompt('What is your name?', '');
+// answers[1] = prompt('What is your surname?', '');
+// answers[2] = prompt('How old are you ?', '');
 
-console.log(typeof answers);
+// console.log(typeof answers);
 
+'use strict';
 
+let incr = 10;
+let decr = 10;
+
+console.log(++incr);
+console.log(--decr);
