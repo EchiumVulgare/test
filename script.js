@@ -1,5 +1,7 @@
+//start project
 const numberOfFilms = +prompt('How much films do you already watch', '');
 
+//add new obj films Data base
 const personalMovieDB = {
   count: numberOfFilms,
   movies: {},
@@ -8,6 +10,7 @@ const personalMovieDB = {
   privat: false,
 };
 
+//validation form and question form
 for (let i = 0; i < 2; i++) {
   const a = prompt('One of the last film wich you have watched is ?', '');
   const b = prompt('Please rate this film', '');
