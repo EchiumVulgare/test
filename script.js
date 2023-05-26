@@ -1,3 +1,4 @@
+//start practice new film app
 const numberOfFilms = +prompt('How much films do you already watch', '');
 
 const personalMovieDB = {
