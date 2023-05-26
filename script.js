@@ -22,6 +22,4 @@ for (let i = 0; i < 2; i++) {
   }
 }
 
-if(personalMovieDB.count)
-
-console.log(personalMovieDB);
+if (personalMovieDB.count) console.log(personalMovieDB);
