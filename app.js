@@ -1822,12 +1822,25 @@
 
 // showFirstMessage('Hello Alex');
 // console.log(num);
+////////////////
+// FUNCTION DECLARATION
+// function all0(){
 
-function hello(name) {
-  const helloName = () => console.log('hello', name);
-  return helloName;
-}
+// }
+// FUNCTION EXPRESION
+// const all1 = function all2 () {}
 
-const helloWorld = hello('World');
-helloWorld();
-hello('Alex');
+// //function declaration
+// function ret() {
+//   let num = 50;
+//   return num;
+// }
+
+// //function expression
+// const anotherNum = function ret() {
+//   console.log(anotherNum);
+// };
+
+// //ARROW FUNCTIO !!!!
+
+// const calc = (a, b) => a + b;
