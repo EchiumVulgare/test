@@ -2001,3 +2001,23 @@
 
 // console.log(smallestDivisor(4));
 
+// const skip = (str) => {
+//   let i = 0;
+//   let result = '';
+
+//   while (i < str.length) {
+//     result = result + str[i];
+//     i = i + 2;
+//   }
+//   return result;
+// };
+
+// console.log(skip('California'));
+
+reverse = (str) => {
+  let length = str.length - 1;
+  let rev = '';
+
+  for (let i = 0;)
+};
+console.log(reverse('cat'));
