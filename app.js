@@ -2014,10 +2014,37 @@
 
 // console.log(skip('California'));
 
-reverse = (str) => {
-  let length = str.length - 1;
-  let rev = '';
+// reverse = (str) => {
+//   let i = str.length - 1;
+//   let result = '';
 
-  for (let i = 0;)
+//   while (i >= 0) {
+//     result = result + str[i];
+//     i--;
+//   }
+//   return result;
+// };
+// console.log(reverse('home'));
+
+// revers = (str) => {
+//   let result = '';
+
+//   for (i = str.length - 1; i >= 0; i--) {
+//     result = result + str[i];
+//   }
+//   return result;
+// };
+
+// console.log(revers('abra kadab ra'));
+
+isPrime = (num) => {
+  if (num <= 1) return false;
+
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) return false;
+  }
+  return true;
 };
-console.log(reverse('cat'));
+
+console.log(isPrime(-3));
+
