@@ -1923,22 +1923,24 @@
 // Да, задача сложнее, но она просто объединяет все то, что мы уже учили.
 
 // function getMathResult(num, times) {
-//   if (typeof times !== 'number' && times <= 0) {
+//   if (typeof times !== 'number' || times <= 0) {
 //     return num;
 //   }
+
 //   let str = '';
 
 //   for (let i = 1; i <= times; i++) {
 //     if (i === times) {
-//       str += i * num;
+//       str += `${num * i}`;
 //     } else {
 //       str += `${num * i}---`;
 //     }
 //   }
+
 //   return str;
 // }
 
-// console.log(getMathResult(150, 3));
+// getMathResult(10, 5);
 
 // const factorial = (n) => {
 //   const iter = (counter, acc) => {
@@ -2037,14 +2039,56 @@
 
 // console.log(revers('abra kadab ra'));
 
-isPrime = (num) => {
-  if (num <= 1) return false;
+//////////////////////////////////////////////
 
-  for (let i = 2; i < num; i++) {
-    if (num % i === 0) return false;
-  }
-  return true;
-};
+// isPrime = (num) => {
+//   if (num <= 1) return false;
 
-console.log(isPrime(-3));
+//   for (let i = 2; i < num; i++) {
+//     if (num % i === 0) return false;
+//   }
+//   return true;
+// };
 
+// console.log(isPrime(-3));
+
+// function getMathResult(num, times) {
+//   if (typeof times !== 'number' && times <= 0) {
+//     return num;
+//   }
+//   let str = '';
+
+//   for (let i = 1; i <= times; i++) {
+//     if (i === times) {
+//       str += i * num;
+//     } else {
+//       str += `${num * i}---`;
+//     }
+//   }
+//   return str;
+// }
+
+function ucFirst(str) {
+  if (!str) return str;
+
+  return str[0].toUpperCase() + str.slice(1);
+}
+
+console.log(ucFirst('hello wolrd'));
+
+function checkSpam(str) {
+  let lowerStr = str.toLowerCase();
+
+  return lowerStr.includes('viagra') || lowerStr.includes('xxx');
+}
+
+function truncate(str, maxlength) {
+  return str.length > maxlength ? str.slice(0, maxlength - 1) + '...' : str;
+}
+
+console.log(truncate('werlwer wer werwererw er wer', 10));
+
+function extractCurrencyValue(str) {
+  return +str.slice(1);
+}
+console.log(extractCurrencyValue('$120') === 120);
