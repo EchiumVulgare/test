@@ -2068,27 +2068,33 @@
 //   return str;
 // }
 
-function ucFirst(str) {
-  if (!str) return str;
+// function ucFirst(str) {
+//   if (!str) return str;
 
-  return str[0].toUpperCase() + str.slice(1);
-}
+//   return str[0].toUpperCase() + str.slice(1);
+// }
 
-console.log(ucFirst('hello wolrd'));
+// console.log(ucFirst('hello wolrd'));
 
-function checkSpam(str) {
-  let lowerStr = str.toLowerCase();
+// function checkSpam(str) {
+//   let lowerStr = str.toLowerCase();
 
-  return lowerStr.includes('viagra') || lowerStr.includes('xxx');
-}
+//   return lowerStr.includes('viagra') || lowerStr.includes('xxx');
+// }
 
-function truncate(str, maxlength) {
-  return str.length > maxlength ? str.slice(0, maxlength - 1) + '...' : str;
-}
+// function truncate(str, maxlength) {
+//   return str.length > maxlength ? str.slice(0, maxlength - 1) + '...' : str;
+// }
 
-console.log(truncate('werlwer wer werwererw er wer', 10));
+// console.log(truncate('werlwer wer werwererw er wer', 10));
 
-function extractCurrencyValue(str) {
-  return +str.slice(1);
-}
-console.log(extractCurrencyValue('$120') === 120);
+// function extractCurrencyValue(str) {
+//   return +str.slice(1);
+// }
+// console.log(extractCurrencyValue('$120') === 120);
+
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////STR ///////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+

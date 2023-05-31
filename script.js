@@ -1,5 +1,15 @@
 //start practice new film app
-const numberOfFilms = +prompt('How much films do you already watch', '');
+let numberOfFilms;
+
+function start() {
+  numberOfFilms = +prompt('How much films do you already watch', '');
+
+  while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
+    numberOfFilms = +prompt('How much films do you already watch', '');
+  }
+}
+
+start();
 
 const personalMovieDB = {
   count: numberOfFilms,
@@ -9,17 +19,31 @@ const personalMovieDB = {
   privat: false,
 };
 
-for (let i = 0; i < 2; i++) {
-  const a = prompt('One of the last film wich you have watched is ?', '');
-  const b = prompt('Please rate this film', '');
+function rememberMyFilms() {
+  for (let i = 0; i < 2; i++) {
+    const a = prompt('One of the last film wich you have watched is ?', '');
+    const b = prompt('Please rate this film', '');
 
-  if (a != null && b != null && a != '' && b != '' && a.length < 50) {
-    personalMovieDB.movies[a] = b;
-    console.log('done');
-  } else {
-    console.log('error');
-    i--;
+    if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+      personalMovieDB.movies[a] = b;
+      console.log('done');
+    } else {
+      console.log('error');
+      i--;
+    }
   }
 }
 
-if (personalMovieDB.count) console.log(personalMovieDB);
+rememberMyFilms();
+
+function detectPersonalLevel() {
+  if (personalMovieDB.count < 10) {
+    console.log('просмотрено довольно мало фильмов');
+  } else if (personalMovieDB.count >= 10 && personalMovieDB < 30) {
+    console.log('Вы киноман!');
+  } else if (personalMovieDB.count >= 30) {
+    console.log('Вы киноман!');
+  } else {
+    console.log('error');
+  }
+}
