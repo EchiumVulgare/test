@@ -2170,34 +2170,88 @@
 
 // getCoupeNumber('Hello')  => "Ошибка. Проверьте правильность введенного номера места"
 
-function getCoupeNumber(seatNumber) {
-  if (setInterval === 0 || seatNumber > 36) {
-    return 'Таких мест в вагоне не существует';
-  }
+// function getCoupeNumber(seatNumber) {
+//   if (setInterval === 0 || seatNumber > 36) {
+//     return 'Таких мест в вагоне не существует';
+//   }
+//   if (
+//     typeof seatNumber !== 'number' ||
+//     seatNumber < 0 ||
+//     !Number.isInteger(seatNumber)
+//   ) {
+//     return 'Ошибка. Проверьте правильность введенного номера места';
+//   }
+//   return Math.ceil(seatNumber / 4);
+// }
+
+// console.log(getCoupeNumber(69));
+
+// function calculateVolumeAndArea(length) {
+//   if (typeof length !== 'number' || length < 0 || !Number.isInteger(length)) {
+//     return 'При вычислении произошла ошибка';
+//   }
+
+//   let volume = 0,
+//     area = 0;
+
+//   volume = length * length * length;
+//   // length ** 3 - это тоже самое, что и выше или варианты через цикл.
+//   // ** - это оператор степени, напоминаю. Но онлайн редактор его не принимает =/
+//   area = 6 * (length * length);
+
+//   return `Объем куба: ${volume}, площадь всей поверхности: ${area}`;
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////CODING EXERCISE 8 //////////////////////////////////////
+//////////////////////////////CODING EXERCISE 8 //////////////////////////////////////
+//////////////////////////////CODING EXERCISE 8 //////////////////////////////////////
+//////////////////////////////CODING EXERCISE 8 //////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////
+
+// 1) Создайте функцию, которая принимает в себя целое число минут и возвращает время в нужном формате строки. (Смотри пример). Обратите внимание на окончание слова "час" - оно меняется в зависимости от цифры. Если вместо аргумента приходит не число, дробное или отрицательное число - функция возвращает строку "Ошибка, проверьте данные" Пример:
+
+// getTimeFromMinutes(150) => "Это 2 часа и 30 минут"
+
+// getTimeFromMinutes(50) => "Это 0 часов и 50 минут"
+
+// getTimeFromMinutes(0) => "Это 0 часов и 0 минут"
+
+// getTimeFromMinutes(-150) => "Ошибка, проверьте данные"
+
+function getTimeFromMinutes(minutesTotal) {
   if (
-    typeof seatNumber !== 'number' ||
-    seatNumber < 0 ||
-    !Number.isInteger(seatNumber)
+    typeof minutesTotal !== 'number' ||
+    minutesTotal < 0 ||
+    !Number.isInteger(minutesTotal)
   ) {
-    return 'Ошибка. Проверьте правильность введенного номера места';
-  }
-  return Math.ceil(seatNumber / 4);
-}
-
-console.log(getCoupeNumber(69));
-
-function calculateVolumeAndArea(length) {
-  if (typeof length !== 'number' || length < 0 || !Number.isInteger(length)) {
-    return 'При вычислении произошла ошибка';
+    return 'Ошибка, проверьте данные';
   }
 
-  let volume = 0,
-    area = 0;
+  const hours = Math.floor(minutesTotal / 60);
+  const minutes = minutesTotal % 60;
 
-  volume = length * length * length;
-  // length ** 3 - это тоже самое, что и выше или варианты через цикл.
-  // ** - это оператор степени, напоминаю. Но онлайн редактор его не принимает =/
-  area = 6 * (length * length);
+  let hoursStr = '';
 
-  return `Объем куба: ${volume}, площадь всей поверхности: ${area}`;
+  switch (hours) {
+    case 0:
+      hoursStr = 'часов';
+      break;
+    case 1:
+      hoursStr = 'час';
+      break;
+    case 2:
+    case 3:
+    case 4:
+      hoursStr = 'часа';
+      break;
+    default:
+      hoursStr = 'часов';
+  }
+
+  return `Это ${hours} ${hoursStr} и ${minutes} минут`;
 }
+
+console.log(getTimeFromMinutes('rwerwer'));
