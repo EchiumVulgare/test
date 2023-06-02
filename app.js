@@ -2098,3 +2098,22 @@
 /////////////////////////STR ///////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////
 
+// let str = 'hello';
+// console.log(str);
+// let a = str[0].toUpperCase() + str.substring();
+// console.log(a);
+
+// function solution(str) {
+//   let arr = str.split(' ');
+//   console.log(arr);
+//   let answer = '';
+
+//   for (let i = 0; i < arr.length; i++) {
+//     answer += arr[i][0].toUpperCase(str) + arr[i].substr(1) + ' ';
+//   }
+
+//   return answer;
+// }
+// console.log(solution('hello, , , , world!'));
+
+// что будет показано: "John" или "Pete"?
