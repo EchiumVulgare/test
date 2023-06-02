@@ -2221,37 +2221,65 @@
 
 // getTimeFromMinutes(-150) => "Ошибка, проверьте данные"
 
-function getTimeFromMinutes(minutesTotal) {
+// function getTimeFromMinutes(minutesTotal) {
+//   if (
+//     typeof minutesTotal !== 'number' ||
+//     minutesTotal < 0 ||
+//     !Number.isInteger(minutesTotal)
+//   ) {
+//     return 'Ошибка, проверьте данные';
+//   }
+
+//   const hours = Math.floor(minutesTotal / 60);
+//   const minutes = minutesTotal % 60;
+
+//   let hoursStr = '';
+
+//   switch (hours) {
+//     case 0:
+//       hoursStr = 'часов';
+//       break;
+//     case 1:
+//       hoursStr = 'час';
+//       break;
+//     case 2:
+//     case 3:
+//     case 4:
+//       hoursStr = 'часа';
+//       break;
+//     default:
+//       hoursStr = 'часов';
+//   }
+
+//   return `Это ${hours} ${hoursStr} и ${minutes} минут`;
+// }
+
+// console.log(getTimeFromMinutes('rwerwer'));
+
+/////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+
+// 2) Напишите функцию, которая принимает в себя 4 числа и возвращает самое большее из них. Если один из аргументов не является числом или их меньше 4 - возвращается 0. Дробные числа разрешены.
+
+// Пример:
+
+// findMaxNumber(1, 5, 6.6, 11); =>  11
+
+// findMaxNumber(1, 5, '6', '10');  =>  0
+
+function findMaxNumber(a, b, c, d) {
   if (
-    typeof minutesTotal !== 'number' ||
-    minutesTotal < 0 ||
-    !Number.isInteger(minutesTotal)
+    typeof a !== 'number' ||
+    typeof b !== 'number' ||
+    typeof c !== 'number' ||
+    typeof d !== 'number'
   ) {
-    return 'Ошибка, проверьте данные';
+    return 0;
+  } else {
+    return Math.max(a, b, c, d);
   }
-
-  const hours = Math.floor(minutesTotal / 60);
-  const minutes = minutesTotal % 60;
-
-  let hoursStr = '';
-
-  switch (hours) {
-    case 0:
-      hoursStr = 'часов';
-      break;
-    case 1:
-      hoursStr = 'час';
-      break;
-    case 2:
-    case 3:
-    case 4:
-      hoursStr = 'часа';
-      break;
-    default:
-      hoursStr = 'часов';
-  }
-
-  return `Это ${hours} ${hoursStr} и ${minutes} минут`;
 }
 
-console.log(getTimeFromMinutes('rwerwer'));
+console.log(findMaxNumber(1, 5, '66', '10'));
+console.log(findMaxNumber(1, 5, 3.9, 8.5));
