@@ -21,7 +21,10 @@
 
 // function rememberMyFilms() {
 //   for (let i = 0; i < 2; i++) {
-//     const a = prompt('One of the last film wich you have watched is ?', '');
+//     const a = prompt(
+//       'One of the last film wich you have watched is ?',
+//       '',
+//     ).trim();
 //     const b = prompt('Please rate this film', '');
 
 //     if (a != null && b != null && a != '' && b != '' && a.length < 50) {
