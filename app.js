@@ -2337,16 +2337,64 @@
 //////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////
 
-function first() {
-  //Do something
-  setTimeout(function () {
-    console.log(1);
-  }, 500);
-}
+// function learnJS(lang, callback) {
+//   console.log(`Я учу: ${lang}`);
+//   callback();
+// }
 
-function second() {
-  console.log(2);
-}
+// function done() {
+//   console.log('Я прошел этот урок');
+// }
 
-first();
-second();
+// learnJS('JavaScript', done);
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////OBJECTS!//////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////
+
+const options = {
+  name: 'test',
+  width: 1024,
+  height: 1024,
+  colors: {
+    border: 'black',
+    bg: 'red',
+  },
+  makeTest: function () {
+    console.log('test');
+  },
+};
+
+console.log(options, Object.keys(options).length);
+
+// delete options.name;
+
+// console.log(options.name);
+
+// for (let key in options) {
+//   if (typeof options[key] === 'object') {
+//     for (let i in options[key]) {
+//       console.log(`Key /${i}/ have property  /${options[key][i]}/`);
+//     }
+//   } else {
+//     console.log(`Key /${key}/ have property  /${options[key]}/`);
+//   }
+// }
+
+// let counter = 0;
+
+// for (let key in options) {
+//   if (typeof options[key] === 'object') {
+//     for (let i in options[key]) {
+//       console.log(`Key /${i}/ have property  /${options[key][i]}/`);
+//       counter++;
+//     }
+//   } else {
+//     console.log(`Key /${key}/ have property  /${options[key]}/`);
+//     counter++;
+//   }
+// }
+
+// console.log(counter);
