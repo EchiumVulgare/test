@@ -70,3 +70,7 @@
 // }
 // writeYourGenres();
 // //added commit
+
+const { getNumber } = require('./app.js');
+
+console.log(getNumber());

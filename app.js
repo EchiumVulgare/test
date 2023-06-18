@@ -2354,34 +2354,27 @@
 //////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////
 
-const options = {
-  name: 'test',
-  width: 1024,
-  height: 1024,
-  colors: {
-    border: 'black',
-    bg: 'red',
-  },
-  makeTest: function () {
-    console.log('test');
-  },
-};
+// const options = {
+//   name: 'test',
+//   width: 1024,
+//   height: 1024,
+//   colors: {
+//     border: 'black',
+//     bg: 'red',
+//   },
+//   makeTest: function () {
+//     console.log('test');
+//   },
+// };
 
-console.log(options, Object.keys(options).length);
+// options.makeTest();
+// const { border, bg } = options.colors;
+// console.log(border);
+// console.log(options, Object.keys(options).length);
 
 // delete options.name;
 
 // console.log(options.name);
-
-// for (let key in options) {
-//   if (typeof options[key] === 'object') {
-//     for (let i in options[key]) {
-//       console.log(`Key /${i}/ have property  /${options[key][i]}/`);
-//     }
-//   } else {
-//     console.log(`Key /${key}/ have property  /${options[key]}/`);
-//   }
-// }
 
 // let counter = 0;
 
@@ -2398,3 +2391,18 @@ console.log(options, Object.keys(options).length);
 // }
 
 // console.log(counter);
+
+// const rabbit = {};
+
+// rabbit.run = function (n) {
+//   console.log(`Rabbit was running ${n} meters`);
+// };
+
+// rabbit.run(5);
+// console.log(rabbit.run);
+
+function getNumber() {
+  return 10;
+}
+
+module.exports = { getNumber };
