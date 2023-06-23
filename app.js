@@ -2401,8 +2401,11 @@
 // rabbit.run(5);
 // console.log(rabbit.run);
 
-function getNumber() {
-  return 10;
-}
+// function getNumber() {
+//   return 10;
+// }
 
-module.exports = { getNumber };
+// module.exports = { getNumber };
+// sumOfSquares = (num1, num2) => {
+//   return (sum = num1 * num1 + num2 * num2);
+// };

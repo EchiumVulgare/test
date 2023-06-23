@@ -71,6 +71,6 @@
 // writeYourGenres();
 // //added commit
 
-const { getNumber } = require('./app.js');
+// const { getNumber } = require('./app.js');
 
-console.log(getNumber());
+// console.log(getNumber());
