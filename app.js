@@ -2351,16 +2351,16 @@
 // first();
 // second();
 
-function learnJS(lang, callback) {
-  console.log(`Iam lerning: ${lang}`);
-  callback();
-}
+// function learnJS(lang, callback) {
+//   console.log(`Iam lerning: ${lang}`);
+//   callback();
+// }
 
-function done() {
-  console.log('Iam finishing this leason!');
-}
+// function done() {
+//   console.log('Iam finishing this leason!');
+// }
 
-learnJS('JavaScript', done);
+// learnJS('JavaScript', done);
 
 // function learnJS(lang, callback) {
 //   console.log(`Я учу: ${lang}`);
@@ -2434,3 +2434,4 @@ learnJS('JavaScript', done);
 // sumOfSquares = (num1, num2) => {
 //   return (sum = num1 * num1 + num2 * num2);
 // };
+
