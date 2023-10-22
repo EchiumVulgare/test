@@ -2435,3 +2435,68 @@
 //   return (sum = num1 * num1 + num2 * num2);
 // };
 
+// function first() {
+//   // Do something
+//   setTimeout(function () {
+//     console.log(1);
+//   }, 500);
+// }
+
+// function second() {
+//   console.log(2);
+// }
+
+// first();
+// second();
+
+// const user = {
+//   name: 'Aleks',
+//   surname: 'Prybysh',
+
+//   get fullName() {
+//     return `${this.name} ${this.surname}`;
+//   },
+
+//   set fullName(value) {
+//     [this.name, this.surname] = value.split(' ');
+//   },
+//   width: 1024,
+//   height: 1024,
+//   colors: {
+//     border: 'black',
+//     bg: 'red',
+//   },
+//   makeTest: function () {
+//     console.log('Test message');
+//   },
+// };
+
+// user.fullName = 'Viktoriia Prybysh';
+
+// let descriptor = Object.getOwnPropertyDescriptor(user, 'name');
+// alert(JSON.stringify(descriptor, null, 2));
+
+// console.log(user.fullName);
+// options.makeTest();
+// console.log(Object.keys(user).length);
+
+// console.log(options.colors.bg);
+
+// delete options.name;
+
+// console.log(options);
+
+// let counter = 0;
+// for (let key in options) {
+//   if (typeof options[key] === 'object') {
+//     for (let i in options[key]) {
+//       console.log(`Properties ${i} have value ${options[key][i]}`);
+//     }
+//   } else {
+//     console.log(`Properties ${key} have value ${options[key]}`);
+//     counter++;
+//   }
+// }
+
+// console.log(counter);
+
